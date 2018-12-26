@@ -258,7 +258,7 @@ int main(int argc, char *argv[]) {
 			// Else timeout occurred
 		} else if(timeout == debounceTime) { // Button debounce timeout
 			if(pressed) {
-				(void)system("shutdown -h now");
+				(void)system("sed -i 's/display_rotate=1/display_rotate=4/g' /boot/config.txt & reboot now");
 				running = 0;
 			}
 		}
